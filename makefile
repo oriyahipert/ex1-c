@@ -8,11 +8,11 @@ mymaths:Power.o basicMath.o myMath.h
 basicMath.o: basicMath.c myMath.h 
 	$(CC) '-Wall -g' -c basicMath.c
 
-mymathd:mymaths Power.o basicMath.o	myMath.h
-	$(CC) '-Wall -g' -shared -o libmyMath.so -fPIC  basicMath.o Power.o myMath.h
-
 Power.o: Power.c myMath.h 
 	$(CC) '-Wall -g' -c Power.c
+
+mymathd:mymaths Power.o basicMath.o	myMath.h
+	$(CC) '-Wall -g' -shared -o libmyMath.so -fPIC  basicMath.o Power.o myMath.h
 
 main.o:main.c myMath.h
 	$(CC) '-Wall -g' -c main.c
