@@ -23,10 +23,5 @@ mains:main.o mymaths
 maind:main.o mymathd
 	$(CC) '-Wall' -o maind main.o ./libmyMath.so 
 
-
-
-# exec: main.o Power.o basicMath.o myMath.h
-# 	$(CC) main.o Power.o basicMath.o myMath.h -o exec
-
 make clean:
 	rm -f *.o *.a *.so
